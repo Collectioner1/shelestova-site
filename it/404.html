@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="/shelestova-site/css/styles.css" />
 </head>
-<body>
+<body data-page="404" data-root="/shelestova-site/">
   <section class="page-hero">
     <div class="container" style="text-align:center;padding:60px 0">
       <span class="eyebrow">Errore 404</span>
@@ -15,19 +15,13 @@
       <p class="lead" style="margin-left:auto;margin-right:auto">
         Il link potrebbe essere obsoleto o l'indirizzo contenere un errore.
       </p>
-      <nav class="lang" style="justify-content:center;margin-top:14px" aria-label="Lingua">
-        <a href="/shelestova-site/">RU</a>
-        <a href="/shelestova-site/en/404.html">EN</a>
-        <a href="/shelestova-site/pt/404.html">PT</a>
-        <a href="/shelestova-site/fr/404.html">FR</a>
-        <a href="/shelestova-site/es/404.html">ES</a>
-        <a href="/shelestova-site/it/404.html" class="is-active" aria-current="true">IT</a>
-      </nav>
+      <nav class="lang" style="justify-content:center;margin-top:14px" data-lang-nav aria-label="Lingua"></nav>
       <div class="btn-row" style="justify-content:center;margin-top:26px">
         <a class="btn btn--primary" href="/shelestova-site/it/">Torna alla home</a>
         <a class="btn btn--ghost" href="/shelestova-site/it/#form">Prenota una sessione</a>
       </div>
     </div>
   </section>
+  <script src="/shelestova-site/js/lang.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Языковой переключатель (RU / EN / PT / FR / ES / IT)
+// Языковой переключатель (RU / EN / PT / FR / ES / IT) — выпадающий список.
 // Страница задаёт data-page="<ключ>" и data-root="<префикс до корня>" на <body>.
 (function () {
   var PAGES = {
@@ -10,7 +10,7 @@
     '404':                    { ru: '404.html',                      en: 'en/404.html',                     pt: 'pt/404.html',                     fr: 'fr/404.html',                     es: 'es/404.html',                     it: 'it/404.html' }
   };
   var ORDER = ['ru', 'en', 'pt', 'fr', 'es', 'it'];
-  var LABELS = { ru: 'RU', en: 'EN', pt: 'PT', fr: 'FR', es: 'ES', it: 'IT' };
+  var LABELS = { ru: 'Русский', en: 'English', pt: 'Português', fr: 'Français', es: 'Español', it: 'Italiano' };
 
   var nav = document.querySelector('[data-lang-nav]');
   if (!nav || nav.children.length) return;
@@ -20,16 +20,21 @@
   var current = (document.documentElement.lang || 'ru').slice(0, 2).toLowerCase();
   var map = PAGES[page] || PAGES.home;
 
-  ORDER.forEach(function (code) {
-    var a = document.createElement('a');
-    a.href = prefix + (map[code] || '');
-    a.textContent = LABELS[code];
-    a.setAttribute('hreflang', code);
-    a.setAttribute('lang', code);
-    if (code === current) {
-      a.className = 'is-active';
-      a.setAttribute('aria-current', 'true');
-    }
-    nav.appendChild(a);
+  var select = document.createElement('select');
+  select.className = 'lang-select';
+  select.setAttribute('aria-label', nav.getAttribute('aria-label') || 'Language');
+  select.addEventListener('change', function () {
+    if (this.value) location.href = this.value;
   });
+
+  ORDER.forEach(function (code) {
+    var opt = document.createElement('option');
+    opt.value = prefix + (map[code] || '');
+    opt.textContent = LABELS[code];
+    opt.setAttribute('lang', code);
+    if (code === current) opt.selected = true;
+    select.appendChild(opt);
+  });
+
+  nav.appendChild(select);
 })();
