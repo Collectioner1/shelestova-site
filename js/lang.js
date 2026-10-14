@@ -11,6 +11,7 @@
   };
   var ORDER = ['ru', 'en', 'pt', 'fr', 'es', 'it'];
   var LABELS = { ru: 'Русский', en: 'English', pt: 'Português', fr: 'Français', es: 'Español', it: 'Italiano' };
+  var TITLES = { ru: 'Язык', en: 'Language', pt: 'Idioma', fr: 'Langue', es: 'Idioma', it: 'Lingua' };
 
   var nav = document.querySelector('[data-lang-nav]');
   if (!nav || nav.children.length) return;
@@ -19,6 +20,10 @@
   var prefix = document.body.getAttribute('data-root') || '';
   var current = (document.documentElement.lang || 'ru').slice(0, 2).toLowerCase();
   var map = PAGES[page] || PAGES.home;
+
+  var label = document.createElement('span');
+  label.className = 'lang__label';
+  label.textContent = TITLES[current] || TITLES.en;
 
   var select = document.createElement('select');
   select.className = 'lang-select';
@@ -36,5 +41,6 @@
     select.appendChild(opt);
   });
 
+  nav.appendChild(label);
   nav.appendChild(select);
 })();

@@ -88,7 +88,8 @@ p { margin: 0 0 1em; }
 .mobile-nav.open { display: flex; }
 .mobile-nav a { padding: 10px 0; color: var(--ink); border-bottom: 1px solid var(--line); }
 .header__right { display: flex; align-items: center; gap: 22px; }
-.lang { display: flex; align-items: center; }
+.lang { display: flex; align-items: center; gap: 8px; }
+.lang__label { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
 .lang-select {
   font: inherit; font-size: 0.84rem; font-weight: 600; color: var(--ink);
   background-color: var(--bg); border: 1px solid var(--line); border-radius: 10px;
