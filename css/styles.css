@@ -291,3 +291,30 @@ p { margin: 0 0 1em; }
   .form-wrap { padding: 24px 20px; }
   .hero__card { padding: 22px; }
 }
+
+/* Hero cover background */
+.hero--cover {
+  background-image:
+    linear-gradient(90deg, rgba(246,247,245,0.95) 0%, rgba(246,247,245,0.80) 45%, rgba(246,247,245,0.35) 100%),
+    url('../img/hero-cover.jpg');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+/* Service cards with image */
+.card--img { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.card--img .card__media { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.card--img .card__body { padding: 22px 26px 26px; display: flex; flex-direction: column; flex: 1; }
+.card--img .card__body .card__more { margin-top: auto; }
+
+/* Service page banner image */
+.service-banner { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+
+@media (max-width: 900px) {
+  .hero--cover {
+    background-image:
+      linear-gradient(rgba(246,247,245,0.93), rgba(246,247,245,0.93)),
+      url('../img/hero-cover.jpg');
+  }
+}
