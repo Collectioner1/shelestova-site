@@ -85,7 +85,7 @@ img/                        сюда положить фото (elena.jpg) и og
 - [ ] Отправить sitemap в Яндекс.Вебмастер и Google Search Console.
 - [ ] Добавить ссылку на сайт в Telegram-канал и профиль.
 
-## Деплой на GitHub Pages (аккаунт Collectioner892)
+## Деплой на GitHub Pages (аккаунт Collectioner1)
 
 Репозиторий уже инициализирован (`git init`, ветка `main`, первый коммит, remote `origin`).
 Осталось залогиниться в GitHub и запушить. Откройте **новое** окно PowerShell:
@@ -100,10 +100,10 @@ git remote remove origin
 gh repo create shelestova-site --public --source=. --remote=origin --push
 
 # 3. Включить Pages (или сделать это в веб-интерфейсе, см. ниже)
-gh api --method POST /repos/Collectioner892/shelestova-site/pages -f "source[branch]=main" -f "source[path]=/"
+gh api --method POST /repos/Collectioner1/shelestova-site/pages -f "source[branch]=main" -f "source[path]=/"
 ```
 
-Либо включить Pages вручную: https://github.com/Collectioner892/shelestova-site/settings/pages →
+Либо включить Pages вручную: https://github.com/Collectioner1/shelestova-site/settings/pages →
 **Source: Deploy from a branch** → **Branch: main / (root)** → Save.
 
 Адрес сайта после сборки (~1 минута): **https://collectioner892.github.io/shelestova-site/**

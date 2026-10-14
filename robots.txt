@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://collectioner892.github.io/shelestova-site/sitemap.xml
+Sitemap: https://collectioner1.github.io/shelestova-site/sitemap.xml
