@@ -30,6 +30,9 @@ body {
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 img { max-width: 100%; display: block; }
@@ -275,21 +278,48 @@ p { margin: 0 0 1em; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .section { padding: 56px 0; }
-  .hero { padding: 56px 0 44px; }
-  .hero__grid { grid-template-columns: 1fr; gap: 34px; }
+  .container { padding: 0 18px; }
+  .section { padding: 52px 0; }
+  .section-head { margin-bottom: 30px; }
+  .hero { padding: 52px 0 40px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 30px; }
   .grid--3, .grid--4, .who, .steps, .prices, .reviews, .contacts { grid-template-columns: 1fr 1fr; }
   .offer { grid-template-columns: 1fr; }
   .nav { display: none; }
   .burger { display: block; }
   .sticky-cta { display: block; }
-  body { padding-bottom: 76px; }
+  body { padding-bottom: 84px; }
+  .strip__inner { gap: 12px 0; }
+  .strip__inner span { flex: 0 0 50%; }
+  .strip__inner span::before { content: none; }
+  .page-hero { padding: 46px 0 24px; }
 }
 @media (max-width: 620px) {
   body { font-size: 16px; }
-  .grid--2, .grid--3, .grid--4, .who, .steps, .prices, .reviews, .contacts, .form-grid, .case__cols, .crosslinks { grid-template-columns: 1fr; }
-  .form-wrap { padding: 24px 20px; }
+  .container { padding: 0 16px; }
+  .section { padding: 42px 0; }
+  .section--tight { padding: 36px 0; }
+  .section-head { margin-bottom: 26px; }
+  .hero { padding: 40px 0 30px; }
+  .hero h1 { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .hero p.lead { font-size: 1.05rem; }
+  .grid--2, .grid--3, .grid--4, .who, .steps, .prices, .reviews, .contacts, .form-grid, .crosslinks { grid-template-columns: 1fr; }
+  .btn-row { gap: 10px; }
+  .btn-row .btn { width: 100%; }
+  .btn { padding: 14px 22px; }
+  .form-wrap { padding: 22px 18px; }
   .hero__card { padding: 22px; }
+  .result-box { padding: 20px; }
+  .card--img .card__body { padding: 20px 22px 22px; }
+  .price--featured::after { left: 22px; }
+  .mobile-nav a { padding: 13px 0; }
+  .crosslinks { margin-top: 30px; }
+}
+@media (max-width: 400px) {
+  .container { padding: 0 14px; }
+  .brand { font-size: 0.98rem; }
+  .strip__inner span { flex: 0 0 100%; }
+  .hero h1 { font-size: 1.5rem; }
 }
 
 /* Hero cover background */
