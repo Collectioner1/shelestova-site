@@ -15,9 +15,17 @@
   <meta property="og:url" content="https://collectioner1.github.io/shelestova-site/" />
   <meta property="og:image" content="https://collectioner1.github.io/shelestova-site/img/og-image.jpg" />
 
+  <link rel="alternate" hreflang="ru" href="https://collectioner1.github.io/shelestova-site/" />
+  <link rel="alternate" hreflang="en" href="https://collectioner1.github.io/shelestova-site/en/" />
+  <link rel="alternate" hreflang="pt" href="https://collectioner1.github.io/shelestova-site/pt/" />
+  <link rel="alternate" hreflang="fr" href="https://collectioner1.github.io/shelestova-site/fr/" />
+  <link rel="alternate" hreflang="es" href="https://collectioner1.github.io/shelestova-site/es/" />
+  <link rel="alternate" hreflang="it" href="https://collectioner1.github.io/shelestova-site/it/" />
+  <link rel="alternate" hreflang="x-default" href="https://collectioner1.github.io/shelestova-site/" />
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body data-page="home" data-root="">
 
   <!-- ================= ШАПКА ================= -->
   <header class="header">
@@ -26,16 +34,19 @@
         Елена Шелестова
         <span>консультации и практические встречи</span>
       </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#services">Услуги</a>
-        <a href="#about">Обо мне</a>
-        <a href="#prices">Цены</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#faq">Вопросы</a>
-        <a href="#contacts">Контакты</a>
-        <a class="btn btn--primary nav__cta" href="#form">Записаться</a>
-      </nav>
-      <button class="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+      <div class="header__right">
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#about">Обо мне</a>
+          <a href="#prices">Цены</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#faq">Вопросы</a>
+          <a href="#contacts">Контакты</a>
+          <a class="btn btn--primary nav__cta" href="#form">Записаться</a>
+        </nav>
+        <nav class="lang" data-lang-nav aria-label="Язык"></nav>
+        <button class="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+      </div>
     </div>
     <nav class="mobile-nav" aria-label="Мобильное меню">
       <a href="#services">Услуги</a>
@@ -470,6 +481,7 @@
     <a class="btn btn--primary btn--block" href="#form">Записаться на встречу</a>
   </div>
 
+  <script src="js/lang.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

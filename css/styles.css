@@ -87,6 +87,14 @@ p { margin: 0 0 1em; }
 }
 .mobile-nav.open { display: flex; }
 .mobile-nav a { padding: 10px 0; color: var(--ink); border-bottom: 1px solid var(--line); }
+.header__right { display: flex; align-items: center; gap: 22px; }
+.lang { display: flex; align-items: center; gap: 2px; }
+.lang a {
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; color: var(--muted);
+  padding: 5px 8px; border-radius: 8px; text-transform: uppercase;
+}
+.lang a:hover { color: var(--accent); text-decoration: none; }
+.lang a.is-active { color: var(--accent-ink); background: var(--accent-soft); }
 
 /* Buttons */
 .btn {

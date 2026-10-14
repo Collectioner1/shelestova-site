@@ -44,7 +44,7 @@
       err.style.color = '#b3261e';
       err.style.fontSize = '0.88rem';
       err.style.marginBottom = '12px';
-      err.textContent = 'Заполните имя, контакт и подтвердите согласие на обработку данных.';
+      err.textContent = form.getAttribute('data-error') || 'Заполните имя, контакт и подтвердите согласие на обработку данных.';
       form.prepend(err);
       return;
     }
